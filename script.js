@@ -14,7 +14,7 @@ const redCircle1 = document.getElementById("rond1");
 const redCircle2 = document.getElementById("rond2");
 
 /*****************variable******************** */
-let limit = 10;
+let limit = 100;
 let score = "";
 let aki = true;
 
@@ -58,7 +58,6 @@ roll.addEventListener("click", () => {
   score = throwdé();
   if (score == 1) {
     score = 0;
-    finTour(aki);
     changePlayer(aki);
     aki = !aki;
   } else {
@@ -95,6 +94,7 @@ validScore = (scoreBoard) => {
   return result;
 };
 
+//changement player
 changePlayer = (aki) => {
   if (aki == true) {
     global1.innerHTML = validScore(global1.textContent);
@@ -111,14 +111,7 @@ changePlayer = (aki) => {
   }
 };
 
-finTour = (aki) => {
-  if (aki == true) {
-    round1.innerHTML = 0;
-  } else {
-    round2.innerHTML = 0;
-  }
-};
-
+//verification du score limite
 verifScore = (aki) => {
   if (aki == true) {
     if (global1.textContent >= limit) {

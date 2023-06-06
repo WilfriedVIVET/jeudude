@@ -10,7 +10,7 @@
   display: flex;
 }
 
-/********************hearder********************/
+/********************header********************/
 
 header {
   padding-top: 15px;
@@ -160,4 +160,5 @@ h2 {
 .hold:hover,
 .roll:hover {
   scale: 1.2;
+  cursor: grab;
 }

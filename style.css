@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.playerScore {
+  display: flex;
+}
+
+/********************hearder********************/
+
+header {
+  padding-top: 15px;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(208, 203, 203, 0);
+  justify-content: center;
+}
+
+/*********************game**********************/
+
+#player1,
+#player2 {
+  border: 2px solid grey;
+}
+
+.game {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.board1,
+.board2 {
+  height: 100vh;
+  width: 50%;
+}
+
+.board1 {
+  background-color: rgb(235, 232, 232);
+}
+
+.board2 {
+  background-color: rgb(243, 239, 239);
+}
+
+h2,
+.score1,
+.score2,
+.currentScore {
+  display: flex;
+  position: relative;
+  width: 200px;
+  font-size: 3em;
+  margin: auto;
+  height: 80px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 90px;
+}
+
+.currentScore {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+  background-color: brown;
+  font-size: x-large;
+  border: 2px solid grey;
+}
+
+.scoreBoard1,
+.scoreBoard2 {
+  color: white;
+}
+
+/**************************menu***************************/
+
+.newGame {
+  display: flex;
+  height: 50px;
+  width: 200px;
+  top: 10%;
+  font-size: 2em;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.dé,
+.roll,
+.hold {
+  position: relative;
+  display: flex;
+  margin: auto;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+}
+
+.dé {
+  background-color: rgb(243, 239, 239);
+  top: 250px;
+  height: 100px;
+  width: 100px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.66);
+  font-size: xx-large;
+  font-weight: bolder;
+  color: brown;
+  border-radius: 10px;
+}
+
+.roll {
+  height: 50px;
+  width: 150px;
+  top: 300px;
+}
+
+.hold {
+  height: 50px;
+  width: 150px;
+  top: 300px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: xx-large;
+}
+
+.roll,
+.hold {
+  font-weight: bold;
+}
+
+/*****************animations***********/
+
+.newGame:hover,
+.hold:hover,
+.roll:hover {
+  scale: 1.2;
+}

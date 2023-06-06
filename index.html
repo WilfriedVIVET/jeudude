@@ -9,12 +9,17 @@
   </head>
   <body>
     <header>
-      <div class="newGame" id="newGame">NEW GAME</div>
+      <div class="newGame" id="newGame">
+        <img id="add" src="./asset/icons/add.png" alt="new game" /> NEW GAME
+      </div>
     </header>
     <section class="container">
       <section class="playerScore">
         <div class="board1">
-          <h2 id="player1">Player 1</h2>
+          <h2 id="player1">
+            Player 1
+            <img id="rond1" src="./asset/icons/record.png" alt="rond rouge" />
+          </h2>
           <div class="score1"></div>
           <div class="currentScore" id="current1">
             <h3>current</h3>
@@ -22,7 +27,10 @@
           </div>
         </div>
         <div class="board2">
-          <h2 id="player2">Player 2</h2>
+          <h2 id="player2">
+            Player 2
+            <img id="rond2" src="./asset/icons/record.png" alt="rond rouge" />
+          </h2>
           <div class="score2"></div>
           <div class="currentScore" id="current2">
             <h3>current</h3>
@@ -32,10 +40,14 @@
       </section>
       <section class="game">
         <div class="dé" id="dé"></div>
-        <div class="roll">ROLL DICE</div>
-        <div class="hold">HOLD</div>
+        <div class="roll">
+          <img id="roll" src="./asset/icons/roll.png" alt="roll" /> ROLL DICE
+        </div>
+        <div class="hold">
+          <img id="hold" src="./asset/icons/hold.png" alt="hold" /> HOLD
+        </div>
       </section>
     </section>
-    <script src="./main.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

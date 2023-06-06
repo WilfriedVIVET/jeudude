@@ -1,18 +1,20 @@
-const score1 = document.querySelector(".score1");
-const score2 = document.querySelector(".score2");
+const round1 = document.querySelector(".score1");
+const round2 = document.querySelector(".score2");
 const roll = document.querySelector(".roll");
 const hold = document.querySelector(".hold");
 const dé = document.getElementById("dé");
 const player1 = document.getElementById("player1");
 const player2 = document.getElementById("player2");
-const scoreBoard1 = document.querySelector(".scoreBoard1");
-const scoreBoard2 = document.querySelector(".scoreBoard2");
+const global1 = document.querySelector(".scoreBoard1");
+const global2 = document.querySelector(".scoreBoard2");
 const newGame = document.querySelector(".newGame");
 const board1 = document.querySelector(".board1");
 const board2 = document.querySelector(".board2");
+const redCircle1 = document.getElementById("rond1");
+const redCircle2 = document.getElementById("rond2");
 
 /*****************variable******************** */
-let limit = 100;
+let limit = 10;
 let score = "";
 let aki = true;
 
@@ -21,19 +23,6 @@ if (aki == true) {
 } else {
   valeur = "2";
 }
-
-/****************RAZ*********************/
-raz = () => {
-  scoreBoard1.innerText = "0";
-  scoreBoard2.innerText = "0";
-  score1.innerHTML = "0";
-  score2.innerHTML = "0";
-  player2.style.border = "hidden";
-  player1.style.border = "solid";
-  player1.style.color = "grey";
-  player2.style.color = "grey";
-  aki == true;
-};
 
 /*****************dé************************** */
 //création du tableau des faces du dé
@@ -50,6 +39,17 @@ newGame.addEventListener("click", () => {
   raz();
 });
 
+/****************RAZ*********************/
+raz = () => {
+  global1.innerText = "0";
+  global2.innerText = "0";
+  round1.innerHTML = "0";
+  round2.innerHTML = "0";
+  redCircle2.style.opacity = "0";
+  player1.style.color = "grey";
+  player2.style.color = "grey";
+  aki == true;
+};
 /************Remise à zero******************** */
 raz();
 
@@ -63,9 +63,9 @@ roll.addEventListener("click", () => {
     aki = !aki;
   } else {
     if (aki == true) {
-      score1.innerHTML = score;
+      round1.innerHTML = score;
     } else {
-      score2.innerHTML = score;
+      round2.innerHTML = score;
     }
   }
 });
@@ -97,40 +97,40 @@ validScore = (scoreBoard) => {
 
 changePlayer = (aki) => {
   if (aki == true) {
-    player1.style.border = "hidden";
-    player2.style.border = "solid";
-    scoreBoard1.innerHTML = validScore(scoreBoard1.textContent);
+    global1.innerHTML = validScore(global1.textContent);
     score = 0;
-    score1.innerHTML = 0;
+    round1.innerHTML = 0;
+    redCircle2.style.opacity = "100";
+    redCircle1.style.opacity = "0";
   } else {
-    player1.style.border = "solid";
-    player2.style.border = "hidden";
-    scoreBoard2.innerHTML = validScore(scoreBoard2.textContent);
+    global2.innerHTML = validScore(global2.textContent);
     score = 0;
-    score2.innerHtml = 0;
+    round2.innerHTML = 0;
+    redCircle2.style.opacity = "0";
+    redCircle1.style.opacity = "100";
   }
 };
 
 finTour = (aki) => {
   if (aki == true) {
-    score1.innerHTML = 0;
+    round1.innerHTML = 0;
   } else {
-    score2.innerHTML = 0;
+    round2.innerHTML = 0;
   }
 };
 
 verifScore = (aki) => {
   if (aki == true) {
-    if (scoreBoard1.textContent >= limit) {
+    if (global1.textContent >= limit) {
       console.log("player 1 gagne");
-      player1.style.color = "red";
+      player1.style.color = "green";
     } else {
       return;
     }
   } else {
-    if (scoreBoard2.textContent >= limit) {
+    if (global2.textContent >= limit) {
       console.log("player 2 gagne");
-      player2.style.color = "red";
+      player2.style.color = "green";
     }
   }
   return;

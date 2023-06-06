@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu de dé</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="newGame" id="newGame">NEW GAME</div>
+    </header>
+    <section class="container">
+      <section class="playerScore">
+        <div class="board1">
+          <h2 id="player1">Player 1</h2>
+          <div class="score1"></div>
+          <div class="currentScore" id="current1">
+            <h3>current</h3>
+            <span class="scoreBoard1"></span>
+          </div>
+        </div>
+        <div class="board2">
+          <h2 id="player2">Player 2</h2>
+          <div class="score2"></div>
+          <div class="currentScore" id="current2">
+            <h3>current</h3>
+            <span class="scoreBoard2"></span>
+          </div>
+        </div>
+      </section>
+      <section class="game">
+        <div class="dé" id="dé"></div>
+        <div class="roll">ROLL DICE</div>
+        <div class="hold">HOLD</div>
+      </section>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
